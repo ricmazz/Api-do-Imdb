@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiImdb</name>
+    </assembly>
+    <members>
+        <member name="M:ApiImdb.Controllers.AdministradoresController.#ctor(ApiImdb.Context.IMDBContext)">
+            <summary>
+            Funcionalidades dos Administradores
+            </summary>
+        </member>
+        <member name="M:ApiImdb.Controllers.AdministradoresController.GerarRelacaoNaoAdministradores">
+            <summary>
+            Funcionalidades para trazer todos os usuários que não são administradores.
+            </summary>
+        </member>
+        <member name="M:ApiImdb.Controllers.AdministradoresController.CadastroUsuario(ApiImdb.Models.Usuarios)">
+            <summary>
+            Funcionalidade de Cadastro de Administrador
+            </summary>
+            <param name="administrador" >
+            Recebe JSON com as propriedades NomeUsuario (string) e se o usuario esta inativo (true/false).
+            </param>
+        </member>
+        <member name="M:ApiImdb.Controllers.AdministradoresController.AlteracaoUsuario(ApiImdb.Models.Administradores)">
+            <summary>
+            Funcionalidade para edição do usuário
+            </summary>
+            <param name="administrador"></param>
+        </member>
+        <member name="M:ApiImdb.Controllers.AdministradoresController.InativarUsuario(System.Int32)">
+            <summary>
+            Funcionalidade para inativar o cadastro do usuário
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:ApiImdb.Controllers.FilmesController.CadastrarFilme(System.Int32,ApiImdb.Models.Filmes)">
+            <summary>
+            Funcionalidade para cadastrar um filme novo
+            </summary>
+            <param name="idUsuario">Id do Usuario</param>
+            <param name="filme">Filme a cadastrar</param>
+        </member>
+        <member name="M:ApiImdb.Controllers.FilmesController.CadastrarFilme(ApiImdb.Models.Votacoes)">
+            <summary>
+            Funcionalidade para votar em um filme
+            </summary>
+            <param name="voto">Objeto do Tipo Votacoes</param>
+        </member>
+        <member name="M:ApiImdb.Controllers.FilmesController.ListarFilmes(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Funcionalidade para gerar relação de votação de filme com filtros.
+            </summary>
+            <param name="tipoFiltro">Tipo de filtro que será utilizado</param>
+            <param name="diretor">Filtro de diretores do filme</param>
+            <param name="nome">Filtro de nome do filme</param>
+            <param name="genero">Filuro de genero do filme</param>
+            <param name="atores">Filtro de atores do filme.</param>
+        </member>
+        <member name="M:ApiImdb.Controllers.UsuariosController.GerarRelacaoUsuarios">
+            <summary>
+            Funcionalidades dos Usuários
+            </summary>
+        </member>
+        <member name="M:ApiImdb.Controllers.UsuariosController.CadastroUsuario(ApiImdb.Models.Usuarios)">
+            <summary>
+            Funcionalidade de Cadastro de Usuário
+            </summary>
+            <param name="usuario" >
+            Recebe JSON com as propriedades NomeUsuario (string) e se o usuario esta inativo (true/false).
+            </param>
+        </member>
+        <member name="M:ApiImdb.Controllers.UsuariosController.AlteracaoUsuario(ApiImdb.Models.Usuarios)">
+            <summary>
+            Funcionalidade para edição do usuário
+            </summary>
+            <param name="usuario"></param>
+        </member>
+        <member name="M:ApiImdb.Controllers.UsuariosController.InativarUsuario(System.Int32)">
+            <summary>
+            Funcionalidade para inativar o cadastro do usuário
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:ApiImdb.Models.Administradores.IdAdministrador">
+            <summary>
+            Id do Administrador
+            </summary>
+        </member>
+        <member name="P:ApiImdb.Models.Administradores.IdUsuario">
+            <summary>
+            Id do Usuário
+            </summary>
+        </member>
+        <member name="P:ApiImdb.Models.Administradores.Inativo">
+            <summary>
+            Informa se o administrador está ativo ou inativo.
+            </summary>
+        </member>
+        <member name="P:ApiImdb.Models.Filmes.IdFilme">
+            <summary>
+            Id do Filme
+            </summary>
+        </member>
+        <member name="P:ApiImdb.Models.Filmes.NomeFilme">
+            <summary>
+            Nome do Filme
+            </summary>
+            <example>Matrix</example>
+        </member>
+        <member name="P:ApiImdb.Models.Filmes.Genero">
+            <summary>
+            Genero do Filme
+            </summary>
+            <example>Ficção</example>
+        </member>
+        <member name="P:ApiImdb.Models.Filmes.Atores">
+            <summary>
+            Indica quem são os atores do filme
+            </summary>
+            <exemple>Brad Pitt, Wagner Moura e Tom Holland</exemple>
+        </member>
+        <member name="P:ApiImdb.Models.Filmes.Diretor">
+            <summary>
+            Indica quem é o diretor(a) do filme
+            </summary>
+            <example>Fernando Meireles</example>
+        </member>
+        <member name="T:ApiImdb.Models.Usuarios">
+            <summary>
+            Modelo do Cadastro de Usuários
+            </summary>
+        </member>
+        <member name="P:ApiImdb.Models.Usuarios.IdUsuario">
+            <summary>
+            Id do Usuário
+            </summary>
+        </member>
+        <member name="P:ApiImdb.Models.Usuarios.NomeUsuario">
+            <summary>
+            Nome do Usuário
+            </summary>
+            <example>Ricardo</example>
+        </member>
+        <member name="P:ApiImdb.Models.Usuarios.Inativo">
+            <summary>
+            Indica se o usuário está ativo.
+            </summary>
+            <example>false</example>
+        </member>
+        <member name="P:ApiImdb.Models.Votacoes.IdVoto">
+            <summary>
+            Id do Voto
+            </summary>
+        </member>
+        <member name="P:ApiImdb.Models.Votacoes.IdUsuario">
+            <summary>
+            Id do Usuário que votou
+            </summary>
+        </member>
+        <member name="P:ApiImdb.Models.Votacoes.IdFilme">
+            <summary>
+            Id do filme votado
+            </summary>
+        </member>
+        <member name="P:ApiImdb.Models.Votacoes.Voto">
+            <summary>
+            Valor do voto
+            </summary>
+            <example>Voto é de zero a quatro [ 0 - 4 ]</example>
+        </member>
+    </members>
+</doc>
